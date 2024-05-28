@@ -1,0 +1,11 @@
+d<-rnorm(100, mean=50, sd=10)
+write.csv(d, file='2024middata.csv', row.names = F)
+hist(d)
+
+x<-rnorm(50, mean=50, sd=5)
+y<-rnorm(50, mean=165, sd=10)
+b<-cor(x,y)*sd(y)/sd(x)
+a<-mean(y)-b*mean(x)
+ans<-lm(y~x)
+d2<-data.frame(t(rbind(x,y)))
+write.csv(d2, file='2024midtest1.csv', row.names=F)

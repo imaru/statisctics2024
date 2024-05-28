@@ -1,0 +1,69 @@
+---
+title: "2024midtest"
+output: html_document
+date: "2024-05-27"
+---
+# 2024年心理学統計法　中間試験
+
+## 1
+以下の文章を読み、内容に誤りがない場合は解答欄に〇を、誤りがあると考えた場合には、そう考えた理由を簡潔に記せ。
+
+1. 記述統計と推測統計は役割が異なるため、1つの研究データに対して両方を実施することはない。
+2. 連続量のデータを要約する場合、基本的には中央値を算出するが、外れ値の影響を避けたい場合などに平均値を用いる場合もある。
+3. 分散は、偏差の二乗和の平均値のことである。
+4. 連続量として取得されたデータを使ってヒストグラムを示した場合、平均や標準偏差を算出して示す必要はない。
+5. xをカテゴリ、yを累積度数として累積度数分布表を作成すると、表の最後の列のyの値は、データの大きさ（データ数）と必ず等しくなる。
+6. 相関係数と線形回帰は、どちらも2変数間の関係を示す指標なので、どちらかだけを算出すれば十分である。
+7. 推測統計とは、標本として得たデータに欠損値があった場合に、その値を推測するための手続きである。
+8. この科目で学ぶ推測統計は、データの母集団が正規分布するという前提に基づいて行われる。
+
+## 2
+標本データとして「7, 6, 8, 10, 6, 5, 7」という7つの数値が得られた。このデータを用いて、以下の問いに答えよ。
+
+1. 平均を計算する式を書け。平均値そのものではなく、式を書くということに注意すること。具体的に数値を入れた式を書くこと（例えば、1と2の和を求める式の場合、1+2 と答えるということ）。
+2. 標本分散から算出する標準偏差を求める式を書け。ただし、標本分散($s^2$)を求めるための式は一般的に以下のように与えられる。この問いも、具体的に数値を示した式を書かなくてはいけない。式に必要な値は、必要に応じて算出すること。算出にはソフトウェアを用いても良い。
+
+$s^2=\frac{\sum^{n}_{i=1}(\bar{x}-x_i)^2}{n}$
+
+3. 標本データをもとに不偏分散を算出し、値を小数点以下第2位まで記せ。算出にはどのような方法を使っても良いが、必ずどの方法を使って算出したかも記すこと。算出方法も採点対象とし、値が間違っていても部分点を与える場合がある。
+
+## 3
+eシラバスから2024middata1.csvを入手し、データxとデータyについて以下の問いに答えよ。
+
+1. データx, データy、それぞれについて書いたヒストグラムをもとに、それぞれの分布の特徴を簡潔に述べよ。
+2. データxとデータyの散布図をもとに、xとyの間の関係について簡潔に述べよ。
+3. xとyの相関係数を算出し、小数点以下第3位まで記せ。
+4. yをxで直線回帰したとき、$\tilde{y}=a+bx$の切片aと回帰係数bを求めよ。
+5. 
+
+## 4
+eシラバスから2024middata2.csvを入手し、データxについて以下の問いに答えよ。
+
+1. データの大きさ（データ数）はいくつか。
+2. 
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
