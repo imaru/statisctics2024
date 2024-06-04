@@ -9,3 +9,7 @@ a<-mean(y)-b*mean(x)
 ans<-lm(y~x)
 d2<-data.frame(t(rbind(x,y)))
 write.csv(d2, file='2024midtest1.csv', row.names=F)
+
+plot(x,y)
+hist(x)
+hist(y)
