@@ -1,0 +1,23 @@
+---
+title: "equations"
+output: html_document
+date: "2024-06-06"
+css: my.css
+---
+
+$\bar{y}(\bar{y_1}, \bar{y_2})$
+
+$s^2 (s^2_1, s^2_2)$
+
+$n (n_1, n_2)$
+
+$upper = (\bar{y_1}-\bar{y_2}) + 95\% t値 * \sqrt{\frac{n_1*s_1^2+n_2*s_2^2}{n_1+n_2-2}*(\frac{1}{n_1}+\frac{1}{n_2})}$
+
+$lower = (\bar{y_1}-\bar{y_2}) - 95\% t値 * \sqrt{\frac{n_1*s_1^2+n_2*s_2^2}{n_1+n_2-2}*(\frac{1}{n_1}+\frac{1}{n_2})}$
+
+$95\%t値=qt(0.05/2, 自由度, lower.tail=F)$
+
+$自由度=n_1+n_2-2$
+
+$s_1^2=条件1の不偏分散*\frac{n-1}{n}$
+$n1*s_1^2=n_1*条件1の不偏分散*\frac{n_1-1}{n_1}=条件1の不偏分散*(n_1-1)$
