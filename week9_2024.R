@@ -35,6 +35,9 @@ se<-sqrt((length(d$d1)*var(d$d1)*(length(d$d1)-1)/length(d$d1)+length(d$d2)*var(
 upper<-(mean(d$d1)-mean(d$d2)) + t * se
 lower<-(mean(d$d1)-mean(d$d2)) - t * se
 
+x<-seq(-4,4,0.01)
+plot(x,dt(x=x,df=98),type='l')
+
 
 #sp<-((length(d$d1)-1)*var(d$d1)+(length(d$d2)-1)*var(d$d2))/(length(d$d1)+length(d$d2)-2)
 
