@@ -3,6 +3,6 @@
 
 #dat<-data.frame(t(rbind(dat1, dat2)))
 
-saveRDS(d, file='week10dat.obj')
-write.csv(d, file='week10data1.csv', row.names = F)
+saveRDS(dat, file='week10dat.obj')
+write.csv(dat, file='week10data2.csv', row.names = F)
 
