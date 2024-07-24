@@ -67,3 +67,10 @@ dD<-pivot_longer(dD, cols=c('a1.b1','a1.b2', 'a2.b1', 'a2.b2'), names_sep = '\\.
 anovakun(dD, 'ABs', long=T)
 gD<-ggplot(data=dD, aes(x=A, y=value, fill=B))+geom_boxplot()
 plot(gD)
+
+d3<-read.csv('Q3data.csv')
+t.test(d3$value~d3$name)
+
+d4<-read.csv('Q4data.csv')
+source('anovakun_489.txt')
+anovakun(d4,'sAB',2,2)
