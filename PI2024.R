@@ -15,12 +15,14 @@ cordat<-cbind(cordat,rcond,stroop)
 colnames(rtdat)<-c('ReactionTime','stroop','response')
 colnames(cordat)<-c('cor','stroop', 'response')
 
-grt<-ggplot(data = rtdat, mapping = aes(x=stroop,y=ReactionTime,fill=response))
-grt <- grt + geom_boxplot()
+grt<-ggplot(data = rtdat, mapping = aes(x=interaction(response, stroop),y=ReactionTime,fill=response))
+grt <- grt + geom_boxplot(outlier.shape = NA)
+grt <- grt +geom_jitter(height=0)
 plot(grt)
 
-gcor<-ggplot(data = cordat, mapping = aes(x=stroop, y=cor, fill=response))
-gcor<-gcor+geom_boxplot()
+gcor<-ggplot(data = cordat, mapping = aes(x=interaction(response, stroop,response), y=cor, fill=response))
+gcor<-gcor+geom_boxplot(outlier.shape = NA)
+gcor<-gcor+geom_jitter(height=0)
 plot(gcor)
 
 anovadat<-data.frame(cbind(Q2,Q4,Q6,Q8))
